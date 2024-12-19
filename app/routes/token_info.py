@@ -60,6 +60,6 @@ def token_info(request: TokenRequest):
     print(response_details)
     return {
         "status": "success",
-        "message": "this is the status of the transaction",
+        "message": "This is the token info from the past 1 hour",
         "data": response_details,
     }

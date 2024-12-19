@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.routes.health import health_router
 from app.routes.token_info import token_info_router
+from app.routes.top_nfts import top_nfts_router
 
 app = FastAPI()
 
@@ -23,4 +24,7 @@ def read_root():
 app.include_router(health_router, prefix="/data-api", tags=["Health"])
 
 # token info
-app.include_router(token_info_router,prefix="/token-info", tags=["Token Details"])
+app.include_router(token_info_router,prefix="/data-api", tags=["Token Details"])
+
+# top traded nfts
+app.include_router(top_nfts_router, prefix="/data-api", tags=["Resently top traded NFTs"])
