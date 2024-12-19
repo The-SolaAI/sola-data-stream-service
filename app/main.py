@@ -5,6 +5,7 @@ from app.routes.token_info import token_info_router
 from app.routes.top_nfts import top_nfts_router
 from app.routes.top_pump_tokens_by_mc import top_pump_tokens_mc_router
 from app.routes.top_pump_tokens_gt_10k_mc import top_pump_tokens_gt_10k_mc_router
+from app.routes.nft_info import nft_info_router
 
 app = FastAPI()
 
@@ -27,6 +28,9 @@ app.include_router(health_router, prefix="/data-api", tags=["Health"])
 
 # token info
 app.include_router(token_info_router,prefix="/data-api", tags=["Token Details"])
+
+# nft info
+app.include_router(nft_info_router,prefix="/data-api",tags=["All time NFT stats"])
 
 # top traded nfts
 app.include_router(top_nfts_router, prefix="/data-api", tags=["Resently top traded NFTs"])

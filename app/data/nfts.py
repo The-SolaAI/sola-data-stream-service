@@ -1,0 +1,1 @@
+NFT_SYMBOLS = ["degods","bozo_collective","fartnft"]
