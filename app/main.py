@@ -30,13 +30,13 @@ app.include_router(health_router, prefix="/data-api", tags=["Health"])
 app.include_router(token_info_router,prefix="/data-api", tags=["Token Details"])
 
 # nft info
-app.include_router(nft_info_router,prefix="/data-api",tags=["All time NFT stats"])
+app.include_router(nft_info_router,prefix="/data-api",tags=["NFT"])
 
 # top traded nfts
-app.include_router(top_nfts_router, prefix="/data-api", tags=["Resently top traded NFTs"])
+app.include_router(top_nfts_router, prefix="/data-api", tags=["NFT"])
 
 # top pump fun tokens by MC
-app.include_router(top_pump_tokens_mc_router,prefix="/data-api",tags=["Pump Token by MC"])
+app.include_router(top_pump_tokens_mc_router,prefix="/data-api",tags=["Pump Fun"])
 
 # top pump fun tokens above 10K MC
-app.include_router(top_pump_tokens_gt_10k_mc_router,prefix="/data-api",tags=["Pump Tokens above 10K MC"])
+app.include_router(top_pump_tokens_gt_10k_mc_router,prefix="/data-api",tags=["Pump Fun"])
